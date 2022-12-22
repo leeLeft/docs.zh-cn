@@ -2,7 +2,7 @@
 
 ## 功能
 
-生成空 HLL 列，用于 insert 或导入数据时补充默认值。
+生成空 HLL 列，用于 INSERT 或导入数据时补充默认值。
 
 ## 语法
 
@@ -11,17 +11,23 @@ HLL_EMPTY()
 ```
 
 ## 参数说明
+
 无
 
 ## 返回值说明
-返回值为空的hll。
+
+返回值为空的 HLL。
 
 ## 示例
-insert时补充默认值
+
+示例一：INSERT 时补充默认值。
+
 ```plain text
 insert into hllDemo(k1,v1) values(10,hll_empty());
 ```
-导入数据时补充默认值
+
+示例二：导入数据时补充默认值。
+
 ```plain text
 curl --location-trusted -u root: \
     -H "columns: temp1, temp2, col1=hll_hash(temp1), col2=hll_empty()" \
