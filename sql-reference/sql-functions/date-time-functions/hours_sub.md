@@ -2,7 +2,7 @@
 
 ## 功能
 
-将给指定的日期时间减少指定的小时数。
+从指定的日期时间中减少指定的小时数。
 
 ## 语法
 
@@ -11,14 +11,16 @@ DATETIME hours_sub(DATETIME|DATE date, INT hours);
 ```
 
 ## 参数说明
-* `date`: 指定的时间，支持的数据类型为 DATETIME 或者 DATE。
+
+* `date`: 指定的时间，支持的数据类型为 DATETIME 或 DATE。
 
 * `hours`: 减少的小时数，支持的数据类型为 INT。
 
 ## 返回值说明
+
 返回值的数据类型为 DATETIME。
 
-如果 `date` 或 `hours` 任意一者为NULL或者格式不正确，则返回 NULL。
+如果 `date` 或 `hours` 任意一者为 NULL 或者格式不正确，则返回 NULL。
 
 ## 示例
 
